@@ -1,10 +1,4 @@
 
-class SearchBLoc extends Bloc<SearchEvent,SearchState>{
-  SearchBLoc(): super(CheckSEARCH()){
-    
-  }
-}
-
 
 
 
