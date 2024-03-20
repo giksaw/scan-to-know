@@ -44,7 +44,7 @@ class _SearchPageState extends State<SearchPage1> {
       appBar: AppBar(
         elevation: 2,
         title: const Text(
-          "Scan to Know",
+          "Know your Food",
           style: TextStyle(
             fontFamily: 'Inter',
             color: Colors.black,
@@ -109,63 +109,64 @@ class _SearchPageState extends State<SearchPage1> {
               ),
 
               // Main box
-             Padding(
-  padding: const EdgeInsets.only(top: 30, bottom: 30),
-  child: SingleChildScrollView(
-    scrollDirection: Axis.vertical,
-    child: Container(
-      constraints: BoxConstraints(minHeight: 174), // Minimum height set to the previous fixed height
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        color: const Color.fromRGBO(0, 224, 255, 1),
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.grey,
-            offset: Offset(0.0, 2.0),
-            blurRadius: 4.0,
-            spreadRadius: 2.0,
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(
-              name, // Display received name
-              style: const TextStyle(
-                fontFamily: 'Inter',
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                for (var item in commonNameEng)
-                  Text(
-                    item,
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
+              Padding(
+                padding: const EdgeInsets.only(top: 30, bottom: 30),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Container(
+                    constraints: BoxConstraints(
+                      minHeight: 174,
+                    ), // Minimum height set to the previous fixed height
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      color: const Color.fromRGBO(164, 225, 245, 1),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.grey,
+                          offset: Offset(0.0, 2.0),
+                          blurRadius: 4.0,
+                          spreadRadius: 1.0,
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Text(
+                            name, // Display received name
+                            style: const TextStyle(
+                              fontFamily: 'Inter',
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              for (var item in commonNameEng)
+                                Text(
+                                  item,
+                                  style: const TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-              ],
-            ),
-          )
-        ],
-      ),
-    ),
-  ),
-),
-
+                ),
+              ),
 
               // Scrollbar
               SizedBox(
@@ -189,7 +190,7 @@ class _SearchPageState extends State<SearchPage1> {
                               color: getContainerColor(index),
                               borderRadius: BorderRadius.circular(20),
                               border: Border.all(
-                                  color: const Color.fromRGBO(0, 47, 167, 1))),
+                                  color: const Color.fromRGBO(13, 8, 66, 1))),
                           child: Center(
                             child: Padding(
                               padding: const EdgeInsets.all(6.0),
@@ -214,33 +215,34 @@ class _SearchPageState extends State<SearchPage1> {
                 child: Container(
                   height: 2,
                   width: MediaQuery.of(context).size.width,
-                  color: const Color.fromRGBO(0, 47, 167, 1),
+                  color: const Color.fromRGBO(13, 8, 66, 1),
                 ),
               ),
 
               // Content details container
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  height: 100,
-                  child: ListView.builder(
-                    itemCount: displaytext
-                        .length, // Assuming itemList is a List<String>
-                    itemBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          displaytext[index], // Display each item in the list
-                          style: const TextStyle(
-                            color: Color.fromRGBO(0, 47, 167, 1),
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ),
-              )
+          Padding(
+  padding: const EdgeInsets.all(8.0),
+  child: ListView.builder(
+    shrinkWrap: true,
+    itemCount: displaytext.length,
+    itemBuilder: (BuildContext context, int index) {
+      return Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          displaytext[index],
+          style: const TextStyle(
+            color: Color.fromRGBO(13, 8, 66, 1),
+          ),
+        ),
+      );
+    },
+  ),
+)
+
+
+
+
+              
             ],
           ),
         ),
@@ -252,14 +254,14 @@ class _SearchPageState extends State<SearchPage1> {
   int textindex = 0;
   getContainerColor(int index) {
     return selectedIndex == index
-        ? const Color.fromRGBO(0, 47, 167, 1)
+        ? const Color.fromRGBO(13, 8, 66, 1)
         : Colors.white;
   }
 
   getTxtColor(int index) {
     return selectedIndex == index
         ? Colors.white
-        : const Color.fromRGBO(0, 47, 167, 1);
+        : const Color.fromRGBO(13, 8, 66, 1);
   }
 
   getText(int index) {
@@ -282,26 +284,24 @@ class _SearchPageState extends State<SearchPage1> {
   }
 
   void _showItemNotFoundDialog() {
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return AlertDialog(
-        title: const Text("Item Not Found"),
-        content: const Text("No common name found for the given query."),
-        actions: <Widget>[
-          TextButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            child: const Text("OK"),
-          ),
-        ],
-      );
-    },
-  );
-}
-
-
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Item Not Found"),
+          content: const Text("No common name found for the given query."),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text("OK"),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   // Function to trigger the search action
 // Function to trigger the search action

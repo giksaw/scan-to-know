@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:food_app/bloc/prefmanager/prefmanager.dart';
+import 'package:Know_your_Food/bloc/prefmanager/prefmanager.dart';
 import 'package:http/http.dart' as http;
 
 class WebClient {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'package:food_app/page1.dart';
-import 'package:food_app/test.dart';
+import 'package:Know_your_Food/test.dart';
 //import 'package:food_app/salman%20page.dart';
 
 void main() {
@@ -13,15 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Scan To Know',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromRGBO(0, 224, 255, 1),),
-        useMaterial3: true,
-      ),
-      home:  SearchPage1()
-    );
-    
+        title: 'Know your Food',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromRGBO(48, 131, 255, 1),
+          ),
+          useMaterial3: true,
+        ),
+        home: SearchPage1());
   }
 }
 
