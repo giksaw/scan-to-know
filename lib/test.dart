@@ -220,29 +220,24 @@ class _SearchPageState extends State<SearchPage1> {
               ),
 
               // Content details container
-          Padding(
-  padding: const EdgeInsets.all(8.0),
-  child: ListView.builder(
-    shrinkWrap: true,
-    itemCount: displaytext.length,
-    itemBuilder: (BuildContext context, int index) {
-      return Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Text(
-          displaytext[index],
-          style: const TextStyle(
-            color: Color.fromRGBO(13, 8, 66, 1),
-          ),
-        ),
-      );
-    },
-  ),
-)
-
-
-
-
-              
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: displaytext.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        displaytext[index],
+                        style: const TextStyle(
+                          color: Color.fromRGBO(13, 8, 66, 1),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              )
             ],
           ),
         ),
